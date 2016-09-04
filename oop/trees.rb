@@ -8,10 +8,6 @@ class Tree
   attr_reader :rings
   
   def initialize
-    @rings = rings
-  end
-
-  def rings
     @rings = 0
   end
 
