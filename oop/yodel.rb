@@ -9,10 +9,21 @@
 # constructor accordingly.
 
 class Yodel
+  attr_reader :segment, :count
 
+  def initialize(hash)
+    @segment = hash[:segment]
+    @count = hash[:count]
+  end
+
+  def articulate
+    articulate = ''
+    4.times do
+      articulate += segment
+    end
+    articulate
+  end
 end
-
-
 # Driver code - don't touch anything below this line.
 puts "TESTING the Yodel class..."
 puts
