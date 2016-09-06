@@ -6,7 +6,7 @@ def split_array(array, array_size)
   number = array.length / array_size
   number.times do
     result << index.take(array_size)  
-    index = index.drop(array_size)    
+    index = index.drop(array_size)
   end
   result
 end
