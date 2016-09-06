@@ -39,15 +39,16 @@ trivia_data = {
 }
 
 deck = Deck.new(trivia_data) # deck is an instance of the Deck class
-
-
+score = 0
 while deck.remaining_cards > 0
   card = deck.draw_card # card is an instance of the Card class
   puts card.question
   user_answer = gets.chomp
   if user_answer.downcase == card.answer.downcase
     puts "Correct!"
+    score += 1
   else
     puts "Incorrect!"
   end
 end
+puts "you answered #{score} correct"
